@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url('/images/arka_plan.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+}
+
+header {
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-grow: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.search-bar input {
+    width: 150px;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background-color: #1b3b29;
+    color: white;
+    outline: none;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+main {
+    padding: 6rem 2rem 2rem;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.content-container {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+}
+
+/* Sol Taraf: Tarih ve Saat Seçimi */
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.date-selection,
+.time-selection {
+    text-align: left;
+}
+
+.date-selection h2,
+.time-selection h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.date-buttons,
+.time-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.date-btn,
+.time-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.date-btn.active,
+.time-btn.active {
+    background-color: #1DE782;
+    font-weight: 500;
+}
+
+/* Sağ Taraf: Film Bilgileri */
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.movie-info img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.ticket-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.ticket-info p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.ticket-info p span {
+    font-weight: 500;
+}
+
+#continue-button {
+    background-color: #1DE782;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#continue-button:hover {
+    background-color: #1BD473;
+}

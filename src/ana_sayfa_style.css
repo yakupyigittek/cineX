@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url('/images/arka_plan.png'); /* Arka plan resmini buraya ekliyoruz */
+    background-size: cover; /* Resmin ekranı tamamen kaplamasını sağlıyoruz */
+    background-position: center; /* Resmi ortalıyoruz */
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-attachment: fixed; /*Bu kodla resim sabitlendi*/
+}
+
+header {
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent; /* Navbar'ın arka planını tam saydam yapıyoruz */
+    position: relative;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-right: auto;
+}
+
+header nav {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center; /* Ortada hizalanan menü öğeleri */
+    flex-grow: 1; /* Navbar'ın orta kısmının esnemesini sağlar */
+    position: absolute; /* Navbar'ı pozisyonlandırıyoruz */
+    left: 50%; /* Yatayda tam ortalıyoruz */
+    transform: translateX(-50%); /* 50% kaydırarak tam olarak ortalıyoruz */
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 150px;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background-color: #1b3b29;
+    color: white;
+    outline: none;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolon */
+    gap: 1rem; /* Hem satırlar arasında hem de sütunlar arasında boşluk ekler */
+    justify-items: center; /* Hücreleri yatayda ortalar */
+    align-items: center; /* Hücreleri dikeyde ortalar */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    row-gap: 50px;
+}
+
+.movie-card {
+    width: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* İçeriği dikeyde hizalar */
+    height: 250px; /* Sabit yükseklik */
+}
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Resmin kartın tamamını kaplamasını sağlar */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+movie-card img:hover {
+    transform: scale(1.05);
+}
+
+.movie-card p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    flex-shrink: 0; /* Yazının alt satıra kaymasını engeller */
+}

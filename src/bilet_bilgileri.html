@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineX Bilet Bilgileri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bilet_bilgileri_style.css">
+</head>
+<body>
+    <header>
+        <h1>CineX</h1>
+        <nav>
+            <a href="#">Sinema</a>
+            <a href="#">Hakkında</a>
+            <a href="#">İletişim</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="🔍 Ara">
+        </div>
+    </header>
+
+    <main>
+        <div class="content-container">
+            <!-- Sol Tarafta Tarih ve Saat Seçimi -->
+            <div class="left-section">
+                <div class="date-selection">
+                    <h2>Tarih</h2>
+                    <div class="date-buttons">
+                        <button class="date-btn">20 Ocak</button>
+                        <button class="date-btn">21 Ocak</button>
+                        <button class="date-btn">22 Ocak</button>
+                        <button class="date-btn">23 Ocak</button>
+                        <button class="date-btn active">24 Ocak</button>
+                        <button class="date-btn">25 Ocak</button>
+                    </div>
+                </div>
+                <div class="time-selection">
+                    <h2>Saat</h2>
+                    <div class="time-buttons">
+                        <button class="time-btn">15.30</button>
+                        <button class="time-btn active">16.00</button>
+                        <button class="time-btn">16.30</button>
+                        <button class="time-btn">17.00</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sağ Tarafta Film Bilgileri -->
+            <div class="right-section">
+                <div class="movie-info">
+                    <img src="images/Deadpool_Wolverine 1.png" alt="Deadpool & Wolverine">
+                    <div class="movie-details">
+                        <h2>Deadpool & Wolverine</h2>
+                        <p>Süre: 2h 07m</p>
+                        <p>Tür: Aksiyon</p>
+                    </div>
+                </div>
+                <div class="ticket-info">
+                    <div class="ticket-details">
+                        <p><span>Tarih:</span> <span id="selected-date">24 Ocak 2025</span></p>
+                        <p><span>Saat:</span> <span id="selected-time">16:00</span></p>
+                    </div>
+                    <button id="continue-button">İlerle</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

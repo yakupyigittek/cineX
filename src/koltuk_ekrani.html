@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineX Koltuk Seçimi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="koltuk_ekrani_style.css">
+</head>
+<body>
+    <header>
+        <h1>CineX</h1>
+        <nav>
+            <a href="#">Sinema</a>
+            <a href="#">Hakkında</a>
+            <a href="#">İletişim</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="🔍 Ara">
+        </div>
+    </header>
+
+    <main>
+        <h2 id="movie-title">Film Adı</h2>
+        <div class="seating-area">
+            <div class="seats">
+                <!-- Koltuklar JavaScript ile oluşturulacak -->
+            </div>
+            <div class="screen">X</div>
+        </div>
+        <div class="summary-actions">
+            <div class="summary">
+                <div>
+                    <p><span>TUTAR:</span></p>
+                    <p id="total-price">0 TL</p>
+                </div>
+                <div>
+                    <p><span>KOLTUK:</span></p>
+                    <p id="selected-seats">-</p>
+                </div>
+            </div>
+            <div class="actions">
+                <button id="back-button" onclick="goBack()">Geri</button>
+                <button id="continue-button">Ödemeye Devam</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
